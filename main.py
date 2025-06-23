@@ -1,0 +1,20 @@
+from room import Room
+
+platform = Room("Platform")
+platform.set_description("A long and wide train platform. On the left, covering 50% of the platform is the Loading zone with a storage. To the right is the Passenger Zone of the platform. In front of you are the platform screen doors, which form a barrier between the passengers and the tracks. Behind you is the secret lift you used to come here.")
+loading = Room("Loading Zone")
+loading.set_description("The left hand side of the platform, which is used to load all the goods from the Goods Storage into the train. Behind you in the left corner of the platform is the Goods Storage where they store all their illicit goods. To the right is the Passenger Zone of the platform.")
+goods_storage = Room("Goods storage")
+
+secret_lift = Room("Secret Lift")
+basement = Room("Basement")
+lift = Room("Lift")
+ground = Room("Ground")
+jail_cell = Room("Jail Cell")
+reception = Room("Reception")
+level1 = Room("Level 1")
+presentation = Room("Presentation")
+DC_office = Room("Deputy Commissioner Office")
+UC_offices = Room("Undercover Cops' Offices")
+filing_room = Room("Case Files Rooms")
+cop_quarts = Room("Undercover Cops Living Quarters")
