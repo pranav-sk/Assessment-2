@@ -5,11 +5,15 @@ platform.set_description("A long and wide train platform. On the left, covering 
 loading = Room("Loading Zone")
 loading.set_description("The left hand side of the platform, which is used to load all the goods from the Goods Storage into the train. Behind you in the left corner of the platform is the Goods Storage where they store all their illicit goods. To the right is the Passenger Zone of the platform.")
 goods_storage = Room("Goods storage")
-
+goods_storage.set_description("A big room used to store all the illegal goods for Big Tony's mafia business. Located in the back left corner of the Loading Zone, They take the goods from here and load them into the train.")
 secret_lift = Room("Secret Lift")
+secret_lift.sef_description("Located at the back of the Passenger Zone of the platform, the secret lift is used by the mafia gang to escape from jail as it goes from the basement of the police station to the platform.")
 basement = Room("Basement")
+basement.set_description("The basement of the police station is one level below the ground level. It is also where the police cars park.")
 lift = Room("Lift")
+lift.set_description("This is the main lift for the police station. It travels up and down to all four levels of the police station.")
 ground = Room("Ground")
+
 jail_cell = Room("Jail Cell")
 reception = Room("Reception")
 level1 = Room("Level 1")
