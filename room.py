@@ -3,7 +3,7 @@ class Room:
     def __init__(self,room_name):
         self.room_name = room_name  
         self.description = None
-        self.linked_caves = {}
+        self.linked_rooms = {}
 
     def set_description(self, room_description):
         self.description = room_description
@@ -27,4 +27,12 @@ class Room:
         print(self.description)
 
     def link_room(self, room_to_link, direction):
-        self.linked_room[direction] = room_to_link
+        self.linked_rooms[direction] = room_to_link
+
+    def get_details(self):
+        print(self.name)
+        print("--------------------")
+        print(self.description)
+        for direction in self.linked_rooms:
+            room = self.linked_rooms[direction]
+            print("The " + room.get_name() + " is " + direction)
