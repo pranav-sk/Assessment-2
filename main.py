@@ -44,5 +44,9 @@ UC_offices.link_room(level2, "left")
 level2.link_room(filing_room, "left")
 filing_room.link_room(level2, "right")
 
-platform.get_details()
-level1.get_details()
+current_room = platform
+while platform == True:
+    print("What is your next move, Officer?")
+    current_room.get_details()
+    command = input(">")
+    current_room = current_room.move(command)
