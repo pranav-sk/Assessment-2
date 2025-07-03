@@ -44,9 +44,87 @@ UC_offices.link_room(level2, "left")
 level2.link_room(filing_room, "left")
 filing_room.link_room(level2, "right")
 
+# Start the game
+print("Welcome to the Undercover Cops Game!")
+
 current_room = platform
-while platform == True:
-    print("What is your next move, Officer?")
+while True:
     current_room.get_details()
+    print("Where would you like to go, Officer?")
     command = input(">")
     current_room = current_room.move(command)
+
+current_room = loading
+while True:
+    current_room.get_details()
+    print("Where would you like to go, Officer?")
+    command = input(">")
+    current_room = current_room.move(command)
+
+current_room = goods_storage
+while True:
+    current_room.get_details()
+    print("Where would you like to go, Officer?")
+    command = input(">")
+    current_room = current_room.move(command)
+
+current_room = basement
+while True:
+    current_room.get_details()
+    print("Where would you like to go, Officer?")
+    command = input(">")
+    current_room = current_room.move(command)
+
+current_room = ground
+while True:
+    current_room.get_details()
+    print("Where would you like to go, Officer?")
+    command = input(">")
+    current_room = current_room.move(command)
+
+current_room = jail_cell
+while True:
+    current_room.get_details()
+    print("Where would you like to go, Officer?")
+    command = input(">")
+    current_room = current_room.move(command)
+
+current_room = level1
+while True:
+    current_room.get_details()
+    print("Where would you like to go, Officer?")
+    command = input(">")
+    current_room = current_room.move(command)
+
+current_room = presentation_room
+while True:
+    current_room.get_details()
+    print("Where would you like to go, Officer?")
+    command = input(">")
+    current_room = current_room.move(command)
+
+current_room = level2
+while True:
+    current_room.get_details()
+    print("Where would you like to go, Officer?")
+    command = input(">")
+    current_room = current_room.move(command)
+
+current_room = UC_offices
+while True:
+    current_room.get_details()
+    print("Where would you like to go, Officer?")
+    command = input(">")
+    current_room = current_room.move(command)
+
+current_room = filing_room
+while True:
+    current_room.get_details()
+    print("Where would you like to go, Officer?")
+    command = input(">")
+    current_room = current_room.move(command)
+
+
+
+
+
