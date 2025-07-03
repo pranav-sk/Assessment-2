@@ -5,7 +5,7 @@ class Character:
         self.conversation = None
     
     def describe(self):
-        print("Officer" + self.char_name + "is here!")
+        print("Officer" +  self.char_name  + "is here!")
         print(self.char_description)
     
     def set_conversation(self, conversation):
