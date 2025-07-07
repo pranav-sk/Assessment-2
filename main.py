@@ -47,7 +47,7 @@ filing_room.link_room(level2, "right")
 # Start the game
 print("Welcome to the Undercover Cops Game!")
 
-current_room = platform
+current_room = UC_offices
 while True:
     current_room.get_details()
     print("Where would you like to go, Officer?")
@@ -110,7 +110,7 @@ while True:
     command = input(">")
     current_room = current_room.move(command)
 
-current_room = UC_offices
+current_room = platform
 while True:
     current_room.get_details()
     print("Where would you like to go, Officer?")

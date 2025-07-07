@@ -1,4 +1,11 @@
-from character import Character
+from character import Enemy
 
-harry = Character("Harry","A smelly Wumpus")
+harry = Enemy( "Harry" ,"A smelly Wumpus")
+
 harry.describe()
+
+harry.set_conversation("Come closer. I can't see you!")
+
+harry.talk()
+
+harry.set_weakness("spaghetti")
