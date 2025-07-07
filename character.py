@@ -30,8 +30,8 @@ class Enemy(Character):
 
     def fight(self, combat_item):
         if combat_item == self.weakness:
-            print("You have left " + self.char_name + " weak and heartbroken, but have successfully captured him with the " + combat_item )
+            print("You have left " + self.char_name + " weak and heartbroken, but have successfully captured him with the " + combat_item + "!" )
             return True
         else:
-            print(self.char_name + " has outsmarted you and has knocked you out, you unworthy officer")
+            print(self.char_name + " has outsmarted you and has knocked you out, you unworthy officer!")
             return False
