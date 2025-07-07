@@ -2,7 +2,7 @@ from room import Room
 from character import Character, Enemy
 
 platform = Room("Platform")
-platform.set_description("A long and wide train platform. On the left, covering 50% of the platform is the Loading zone with a storage. To the right is the Passenger Zone of the platform. In front of you are the platform screen doors, which form a barrier between the passengers and the tracks. Behind you is the secret lift you used to come here.")
+platform.set_description("A long and wide train platform. On the left, covering 50% of the platform is the Loading zone with a storage. To the right is the Passenger Zone of the platform. In front of you are the platform screen doors, which form a barrier between the passengers and the tracks. Behind you is the lift you used to come here.")
 loading = Room("Loading Zone")
 loading.set_description("The left hand side of the platform, which is used to load all the goods from the Goods Storage into the train. Behind you in the left corner of the platform is the Goods Storage where they store all their illicit goods. To the right is the Passenger Zone of the platform.")
 goods_storage = Room("Goods storage")
@@ -46,7 +46,7 @@ level2.link_room(filing_room, "left")
 filing_room.link_room(level2, "right")
 
 big_Tony = Enemy("Big Tony", "The grand Mafia boss of Sydney, and NSW's most wanted criminal")
-big_Tony.set_conversation(f"Well, well, well ... if it isn't Officer " + {self.char_name} + ". I see you have found my secret underground railway system.")
+big_Tony.set_conversation(f"Well, well, well ... if it isn't the police. I see you have finallyfound my secret underground railway system. Took you long enough.")
 big_Tony.set_weakness("spaghetti")
 goods_storage.set_character(big_Tony)
 
