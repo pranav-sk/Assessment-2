@@ -4,6 +4,7 @@ class Room:
         self.room_name = room_name  
         self.description = None
         self.linked_rooms = {}
+        self.character = None
 
     def set_description(self, room_description):
         self.description = room_description

@@ -1,4 +1,5 @@
 from room import Room
+from character import Character, Enemy
 
 platform = Room("Platform")
 platform.set_description("A long and wide train platform. On the left, covering 50% of the platform is the Loading zone with a storage. To the right is the Passenger Zone of the platform. In front of you are the platform screen doors, which form a barrier between the passengers and the tracks. Behind you is the secret lift you used to come here.")
@@ -44,82 +45,133 @@ UC_offices.link_room(level2, "left")
 level2.link_room(filing_room, "left")
 filing_room.link_room(level2, "right")
 
+big_Tony = Enemy("Big Tony", "The grand Mafia boss of Sydney, and NSW's most wanted criminal")
+big_Tony.set_conversation(f"Well, well, well ... if it isn't Officer " + {self.char_name} + ". I see you have found my secret underground railway system.")
+big_Tony.set_weakness("spaghetti")
+goods_storage.set_character(big_Tony)
+
+
+
 # Start the game
 print("Welcome to the Undercover Cops Game!")
 
 current_room = UC_offices
 while True:
+    print("/n")
     current_room.get_details()
+    inhabitant = current_room.get_character()
+    if inhabitant is not None:
+        inhabitant.describe()
     print("Where would you like to go, Officer?")
     command = input(">")
     current_room = current_room.move(command)
 
 current_room = loading
 while True:
+    print("/n")
     current_room.get_details()
+    inhabitant = current_room.get_character()
+    if inhabitant is not None:
+        inhabitant.describe()
     print("Where would you like to go, Officer?")
     command = input(">")
     current_room = current_room.move(command)
 
 current_room = goods_storage
 while True:
+    print("/n")
     current_room.get_details()
+    inhabitant = current_room.get_character(big_Tony)
+    if inhabitant is not None:
+        inhabitant.describe()
     print("Where would you like to go, Officer?")
     command = input(">")
     current_room = current_room.move(command)
 
 current_room = basement
 while True:
+    print("/n")
     current_room.get_details()
+    inhabitant = current_room.get_character()
+    if inhabitant is not None:
+        inhabitant.describe()
     print("Where would you like to go, Officer?")
     command = input(">")
     current_room = current_room.move(command)
 
 current_room = ground
 while True:
+    print("/n")
     current_room.get_details()
+    inhabitant = current_room.get_character()
+    if inhabitant is not None:
+        inhabitant.describe()
     print("Where would you like to go, Officer?")
     command = input(">")
     current_room = current_room.move(command)
 
 current_room = jail_cell
 while True:
+    print("/n")
     current_room.get_details()
+    inhabitant = current_room.get_character()
+    if inhabitant is not None:
+        inhabitant.describe()
     print("Where would you like to go, Officer?")
     command = input(">")
     current_room = current_room.move(command)
 
 current_room = level1
 while True:
+    print("/n")
     current_room.get_details()
+    inhabitant = current_room.get_character()
+    if inhabitant is not None:
+        inhabitant.describe()
     print("Where would you like to go, Officer?")
     command = input(">")
     current_room = current_room.move(command)
 
 current_room = presentation_room
 while True:
+    print("/n")
     current_room.get_details()
+    inhabitant = current_room.get_character()
+    if inhabitant is not None:
+        inhabitant.describe()
     print("Where would you like to go, Officer?")
     command = input(">")
     current_room = current_room.move(command)
 
 current_room = level2
 while True:
+    print("/n")
     current_room.get_details()
+    inhabitant = current_room.get_character()
+    if inhabitant is not None:
+        inhabitant.describe()
     print("Where would you like to go, Officer?")
     command = input(">")
     current_room = current_room.move(command)
 
 current_room = platform
 while True:
+    print("/n")
     current_room.get_details()
+    inhabitant = current_room.get_character()
+    if inhabitant is not None:
+        inhabitant.describe()
     print("Where would you like to go, Officer?")
     command = input(">")
     current_room = current_room.move(command)
 
 current_room = filing_room
 while True:
+    print("/n")
     current_room.get_details()
+    inhabitant = current_room.get_character()
+    if inhabitant is not None:
+        inhabitant.describe()
     print("Where would you like to go, Officer?")
     command = input(">")
     current_room = current_room.move(command)
