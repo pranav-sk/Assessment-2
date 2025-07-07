@@ -35,3 +35,7 @@ class Enemy(Character):
         else:
             print(self.char_name + " has outsmarted you and has knocked you out, you unworthy officer!")
             return False
+    
+class Friend(Character):
+    def __init__(self, char_name, char_description):
+        super().__init__(char_name, char_description)

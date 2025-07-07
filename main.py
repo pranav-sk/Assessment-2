@@ -2,7 +2,7 @@ from room import Room
 from character import Character, Enemy
 
 platform = Room("Platform")
-platform.set_description("A long and wide train platform. On the left, covering 50% of the platform is the Loading zone with a storage. To the right is the Passenger Zone of the platform. In front of you are the platform screen doors, which form a barrier between the passengers and the tracks. Behind you is the lift you used to come here.")
+platform.set_description("A long and wide train platform used by the mafia to run their illegal industry. On the left, covering 50% of the platform is the Loading zone with a storage. To the right is the Passenger Zone of the platform. In front of you are the platform screen doors, which form a barrier between the passengers and the tracks. Behind you is the lift you used to come here.")
 loading = Room("Loading Zone")
 loading.set_description("The left hand side of the platform, which is used to load all the goods from the Goods Storage into the train. Behind you in the left corner of the platform is the Goods Storage where they store all their illicit goods. To the right is the Passenger Zone of the platform.")
 goods_storage = Room("Goods storage")
@@ -56,125 +56,348 @@ goods_storage.set_character(big_Tony)
 print("Welcome to the Undercover Cops Game!")
 
 current_room = UC_offices
-while True:
+dead = False
+while dead == False:
     print("/n")
     current_room.get_details()
     inhabitant = current_room.get_character()
     if inhabitant is not None:
         inhabitant.describe()
-    print("Where would you like to go, Officer?")
+    print("Where would you like to go or do, Officer?")
     command = input(">")
-    current_room = current_room.move(command)
+    if command in ["up", "down", "left", "right"]:
+        current_room = current_room.move(command)
+    elif command == "talk":
+        if inhabitant is not None:
+            inhabitant.talk()
+
+    elif command == "fight":
+        if inhabitant is not None and isinstance(inhabitant, Enemy):
+            
+            print("What will you fight with?")
+            fight_with = input()
+            if inhabitant.fight(fight_with) == True:
+                print("Congratualtions, you have successfully won the fight and captured Big Tony!")
+                current_room.set_character(None)
+            else:
+                print("Give up, you have been outsmarted and lost the fight.")
+                print("GAME OVER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                dead = True
+        else:
+            print("There is no one here to fight with")
+
 
 current_room = loading
-while True:
+dead = False
+while dead == False:
     print("/n")
     current_room.get_details()
     inhabitant = current_room.get_character()
     if inhabitant is not None:
         inhabitant.describe()
-    print("Where would you like to go, Officer?")
+    print("Where would you like to go or do, Officer?")
     command = input(">")
-    current_room = current_room.move(command)
+    if command in ["up", "down", "left", "right"]:
+        current_room = current_room.move(command)
+    elif command == "talk":
+        if inhabitant is not None:
+            inhabitant.talk()
+            
+    elif command == "fight":
+        if inhabitant is not None and isinstance(inhabitant, Enemy):
+            
+            print("What will you fight with?")
+            fight_with = input()
+            if inhabitant.fight(fight_with) == True:
+                print("Congratualtions, you have successfully won the fight and captured Big Tony!")
+                current_room.set_character(None)
+            else:
+                print("Give up, you have been outsmarted and lost the fight.")
+                print("GAME OVER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                dead = True
+        else:
+            print("There is no one here to fight with")
+
 
 current_room = goods_storage
-while True:
+dead = False
+while dead == False:
     print("/n")
     current_room.get_details()
     inhabitant = current_room.get_character(big_Tony)
     if inhabitant is not None:
         inhabitant.describe()
-    print("Where would you like to go, Officer?")
+    print("Where would you like to go or do, Officer?")
     command = input(">")
-    current_room = current_room.move(command)
+    if command in ["up", "down", "left", "right"]:
+        current_room = current_room.move(command)
+    elif command == "talk":
+        if inhabitant is not None:
+            inhabitant.talk()
+            
+    elif command == "fight":
+        if inhabitant is not None and isinstance(inhabitant, Enemy):
+            
+            print("What will you fight with?")
+            fight_with = input()
+            if inhabitant.fight(fight_with) == True:
+                print("Congratualtions, you have successfully won the fight and captured Big Tony!")
+                current_room.set_character(None)
+            else:
+                print("Give up, you have been outsmarted and lost the fight.")
+                print("GAME OVER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                dead = True
+        else:
+            print("There is no one here to fight with")
 
 current_room = basement
-while True:
+dead = False
+while dead == False:
     print("/n")
     current_room.get_details()
     inhabitant = current_room.get_character()
     if inhabitant is not None:
         inhabitant.describe()
-    print("Where would you like to go, Officer?")
+    print("Where would you like to go or do, Officer?")
     command = input(">")
-    current_room = current_room.move(command)
+    if command in ["up", "down", "left", "right"]:
+        current_room = current_room.move(command)
+    elif command == "talk":
+        if inhabitant is not None:
+            inhabitant.talk()
+            
+    elif command == "fight":
+        if inhabitant is not None and isinstance(inhabitant, Enemy):
+            
+            print("What will you fight with?")
+            fight_with = input()
+            if inhabitant.fight(fight_with) == True:
+                print("Congratualtions, you have successfully won the fight and captured Big Tony!")
+                current_room.set_character(None)
+            else:
+                print("Give up, you have been outsmarted and lost the fight.")
+                print("GAME OVER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                dead = True
+        else:
+            print("There is no one here to fight with")
 
 current_room = ground
-while True:
+dead = False
+while dead == False:
     print("/n")
     current_room.get_details()
     inhabitant = current_room.get_character()
     if inhabitant is not None:
         inhabitant.describe()
-    print("Where would you like to go, Officer?")
+    print("Where would you like to go or do, Officer?")
     command = input(">")
-    current_room = current_room.move(command)
+    if command in ["up", "down", "left", "right"]:
+        current_room = current_room.move(command)
+    elif command == "talk":
+        if inhabitant is not None:
+            inhabitant.talk()
+            
+    elif command == "fight":
+        if inhabitant is not None and isinstance(inhabitant, Enemy):
+            
+            print("What will you fight with?")
+            fight_with = input()
+            if inhabitant.fight(fight_with) == True:
+                print("Congratualtions, you have successfully won the fight and captured Big Tony!")
+                current_room.set_character(None)
+            else:
+                print("Give up, you have been outsmarted and lost the fight.")
+                print("GAME OVER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                dead = True
+        else:
+            print("There is no one here to fight with")
 
 current_room = jail_cell
-while True:
+dead = False
+while dead == False:
     print("/n")
     current_room.get_details()
     inhabitant = current_room.get_character()
     if inhabitant is not None:
         inhabitant.describe()
-    print("Where would you like to go, Officer?")
+    print("Where would you like to go or do, Officer?")
     command = input(">")
-    current_room = current_room.move(command)
+    if command in ["up", "down", "left", "right"]:
+        current_room = current_room.move(command)
+    elif command == "talk":
+        if inhabitant is not None:
+            inhabitant.talk()
+            
+    elif command == "fight":
+        if inhabitant is not None and isinstance(inhabitant, Enemy):
+            
+            print("What will you fight with?")
+            fight_with = input()
+            if inhabitant.fight(fight_with) == True:
+                print("Congratualtions, you have successfully won the fight and captured Big Tony!")
+                current_room.set_character(None)
+            else:
+                print("Give up, you have been outsmarted and lost the fight.")
+                print("GAME OVER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                dead = True
+        else:
+            print("There is no one here to fight with")
 
 current_room = level1
-while True:
+dead = False
+while dead == False:
     print("/n")
     current_room.get_details()
     inhabitant = current_room.get_character()
     if inhabitant is not None:
         inhabitant.describe()
-    print("Where would you like to go, Officer?")
+    print("Where would you like to go or do, Officer?")
     command = input(">")
-    current_room = current_room.move(command)
+    if command in ["up", "down", "left", "right"]:
+        current_room = current_room.move(command)
+    elif command == "talk":
+        if inhabitant is not None:
+            inhabitant.talk()
+            
+    elif command == "fight":
+        if inhabitant is not None and isinstance(inhabitant, Enemy):
+            
+            print("What will you fight with?")
+            fight_with = input()
+            if inhabitant.fight(fight_with) == True:
+                print("Congratualtions, you have successfully won the fight and captured Big Tony!")
+                current_room.set_character(None)
+            else:
+                print("Give up, you have been outsmarted and lost the fight.")
+                print("GAME OVER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                dead = True
+        else:
+            print("There is no one here to fight with")
 
 current_room = presentation_room
-while True:
+dead = False
+while dead == False:
     print("/n")
     current_room.get_details()
     inhabitant = current_room.get_character()
     if inhabitant is not None:
         inhabitant.describe()
-    print("Where would you like to go, Officer?")
+    print("Where would you like to go or do, Officer?")
     command = input(">")
-    current_room = current_room.move(command)
+    if command in ["up", "down", "left", "right"]:
+        current_room = current_room.move(command)
+    elif command == "talk":
+        if inhabitant is not None:
+            inhabitant.talk()
+            
+    elif command == "fight":
+        if inhabitant is not None and isinstance(inhabitant, Enemy):
+            
+            print("What will you fight with?")
+            fight_with = input()
+            if inhabitant.fight(fight_with) == True:
+                print("Congratualtions, you have successfully won the fight and captured Big Tony!")
+                current_room.set_character(None)
+            else:
+                print("Give up, you have been outsmarted and lost the fight.")
+                print("GAME OVER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                dead = True
+        else:
+            print("There is no one here to fight with")
 
 current_room = level2
-while True:
+dead = False
+while dead == False:
     print("/n")
     current_room.get_details()
     inhabitant = current_room.get_character()
     if inhabitant is not None:
         inhabitant.describe()
-    print("Where would you like to go, Officer?")
+    print("Where would you like to go or do, Officer?")
     command = input(">")
-    current_room = current_room.move(command)
+    if command in ["up", "down", "left", "right"]:
+        current_room = current_room.move(command)
+    elif command == "talk":
+        if inhabitant is not None:
+            inhabitant.talk()
+            
+    elif command == "fight":
+        if inhabitant is not None and isinstance(inhabitant, Enemy):
+            
+            print("What will you fight with?")
+            fight_with = input()
+            if inhabitant.fight(fight_with) == True:
+                print("Congratualtions, you have successfully won the fight and captured Big Tony!")
+                current_room.set_character(None)
+            else:
+                print("Give up, you have been outsmarted and lost the fight.")
+                print("GAME OVER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                dead = True
+        else:
+            print("There is no one here to fight with")
 
 current_room = platform
-while True:
+dead = False
+while dead == False:
     print("/n")
     current_room.get_details()
     inhabitant = current_room.get_character()
     if inhabitant is not None:
         inhabitant.describe()
-    print("Where would you like to go, Officer?")
+    print("Where would you like to go or do, Officer?")
     command = input(">")
-    current_room = current_room.move(command)
+    if command in ["up", "down", "left", "right"]:
+        current_room = current_room.move(command)
+    elif command == "talk":
+        if inhabitant is not None:
+            inhabitant.talk()
+            
+    elif command == "fight":
+        if inhabitant is not None and isinstance(inhabitant, Enemy):
+            
+            print("What will you fight with?")
+            fight_with = input()
+            if inhabitant.fight(fight_with) == True:
+                print("Congratualtions, you have successfully won the fight and captured Big Tony!")
+                current_room.set_character(None)
+            else:
+                print("Give up, you have been outsmarted and lost the fight.")
+                print("GAME OVER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                dead = True
+        else:
+            print("There is no one here to fight with")
 
 current_room = filing_room
-while True:
+dead = False
+while dead == False:
     print("/n")
     current_room.get_details()
     inhabitant = current_room.get_character()
     if inhabitant is not None:
         inhabitant.describe()
-    print("Where would you like to go, Officer?")
+    print("Where would you like to go or do, Officer?")
     command = input(">")
-    current_room = current_room.move(command)
+    if command in ["up", "down", "left", "right"]:
+        current_room = current_room.move(command)
+    elif command == "talk":
+        if inhabitant is not None:
+            inhabitant.talk()
+            
+    elif command == "fight":
+        if inhabitant is not None and isinstance(inhabitant, Enemy):
+            
+            print("What will you fight with?")
+            fight_with = input()
+            if inhabitant.fight(fight_with) == True:
+                print("Congratualtions, you have successfully won the fight and captured Big Tony!")
+                current_room.set_character(None)
+            else:
+                print("Give up, you have been outsmarted and lost the fight.")
+                print("GAME OVER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                dead = True
+        else:
+            print("There is no one here to fight with")
+
 
 
 
