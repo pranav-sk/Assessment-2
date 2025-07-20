@@ -107,7 +107,7 @@ while dead == False:
     inhabitant = current_room.get_character()
     if inhabitant is not None:
         inhabitant.describe()
-    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, get item or fight), Officer?")
+    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take or fight), Officer?")
     command = input(">")
     if command in ["up", "down", "left", "right"]:
         current_room = current_room.move(command)
@@ -125,7 +125,7 @@ while dead == False:
         else:
             print("There is no one here to high five :(")
 
-    elif command == "get item":
+    elif command == "take":
         item = current_room.get_item()
         if item is not None:
             print("You picked up the " + item.get_name() + " and placed it in your bag.")
@@ -164,7 +164,7 @@ while dead == False:
     inhabitant = current_room.get_character()
     if inhabitant is not None:
         inhabitant.describe()
-    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, get item or fight), Officer?")
+    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take or fight), Officer?")
     command = input(">")
     if command in ["up", "down", "left", "right"]:
         current_room = current_room.move(command)
@@ -182,7 +182,7 @@ while dead == False:
         else:
             print("There is no one here to high five :(")
 
-    elif command == "get item":
+    elif command == "take":
         item = current_room.get_item()
         if item is not None:
             print("You picked up the " + item.get_name() + " and placed it in your bag.")
@@ -220,7 +220,7 @@ while dead == False:
     inhabitant = current_room.get_character(big_Tony)
     if inhabitant is not None:
         inhabitant.describe()
-    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, get item or fight), Officer?")
+    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take or fight), Officer?")
     command = input(">")
     if command in ["up", "down", "left", "right"]:
         current_room = current_room.move(command)
@@ -238,7 +238,7 @@ while dead == False:
         else:
             print("There is no one here to high five :(")
 
-    elif command == "get item":
+    elif command == "take":
         item = current_room.get_item()
         if item is not None:
             print("You picked up the " + item.get_name() + " and placed it in your bag.")
@@ -279,7 +279,7 @@ while dead == False:
     inhabitant = current_room.get_character()
     if inhabitant is not None:
         inhabitant.describe()
-    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, get item or fight), Officer?")
+    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take or fight), Officer?")
     command = input(">")
     if command in ["up", "down", "left", "right"]:
         current_room = current_room.move(command)
@@ -297,7 +297,7 @@ while dead == False:
         else:
             print("There is no one here to high five :(")
 
-    elif command == "get item":
+    elif command == "take":
         if item is not None:
             print("You picked up the " + item.get_name() + " and placed it in your bag.")
             bag.append(item.get_name())
@@ -337,7 +337,7 @@ while dead == False:
     inhabitant = current_room.get_character()
     if inhabitant is not None:
         inhabitant.describe()
-    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, get item or fight), Officer?")
+    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take or fight), Officer?")
     command = input(">")
     if command in ["up", "down", "left", "right"]:
         current_room = current_room.move(command)
@@ -355,7 +355,7 @@ while dead == False:
         else:
             print("There is no one here to high five :(")
 
-    elif command == "get item":
+    elif command == "take":
         if item is not None:
             print("You picked up the " + item.get_name() + " and placed it in your bag.")
             bag.append(item.get_name())
@@ -395,7 +395,7 @@ while dead == False:
     inhabitant = current_room.get_character()
     if inhabitant is not None:
         inhabitant.describe()
-    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, get item or fight), Officer?")
+    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take or fight), Officer?")
     command = input(">")
     if command in ["up", "down", "left", "right"]:
         current_room = current_room.move(command)
@@ -413,7 +413,7 @@ while dead == False:
         else:
             print("There is no one here to high five :(")
 
-    elif command == "get item":
+    elif command == "take":
         if item is not None:
             print("You picked up the " + item.get_name() + " and placed it in your bag.")
             bag.append(item.get_name())
@@ -450,7 +450,7 @@ while dead == False:
     inhabitant = current_room.get_character()
     if inhabitant is not None:
         inhabitant.describe()
-    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, get item or fight), Officer?")
+    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take or fight), Officer?")
     command = input(">")
     if command in ["up", "down", "left", "right"]:
         current_room = current_room.move(command)
@@ -467,7 +467,7 @@ while dead == False:
         else:
             print("There is no one here to high five :(")
     
-    elif command == "get item":
+    elif command == "take":
         item = current_room.get_item()
         if item is not None:
             print("You picked up the " + item.get_name() + " and placed it in your bag.")
@@ -508,7 +508,7 @@ while dead == False:
     inhabitant = current_room.get_character()
     if inhabitant is not None:
         inhabitant.describe()
-    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, get item or fight), Officer?")
+    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take or fight), Officer?")
     command = input(">")
     if command in ["up", "down", "left", "right"]:
         current_room = current_room.move(command)
@@ -525,7 +525,7 @@ while dead == False:
         else:
             print("There is no one here to high five :(")
 
-    elif command == "get item":
+    elif command == "take":
         if item is not None:
             print("You picked up the " + item.get_name() + " and placed it in your bag.")
             bag.append(item.get_name())
@@ -562,7 +562,7 @@ while dead == False:
     inhabitant = current_room.get_character()
     if inhabitant is not None:
         inhabitant.describe()
-    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, get item or fight), Officer?")
+    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take or fight), Officer?")
     command = input(">")
     if command in ["up", "down", "left", "right"]:
         current_room = current_room.move(command)
@@ -580,7 +580,7 @@ while dead == False:
         else:
             print("There is no one here to high five :(")
 
-    elif command == "get item":
+    elif command == "take":
         item = current_room.get_item()
         if item is not None:
             print("You picked up the " + item.get_name() + " and placed it in your bag.")
@@ -618,7 +618,7 @@ while dead == False:
     inhabitant = current_room.get_character()
     if inhabitant is not None:
         inhabitant.describe()
-    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, get item or fight), Officer?")
+    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take or fight), Officer?")
     command = input(">")
     if command in ["up", "down", "left", "right"]:
         current_room = current_room.move(command)
@@ -636,7 +636,7 @@ while dead == False:
         else:
             print("There is no one here to high five :(")
 
-    elif command == "get item":
+    elif command == "take":
         item = current_room.get_item()
         if item is not None:
             print("You picked up the " + item.get_name() + " and placed it in your bag.")
@@ -677,7 +677,7 @@ while dead == False:
     inhabitant = current_room.get_character()
     if inhabitant is not None:
         inhabitant.describe()
-    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, get item or fight), Officer?")
+    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take or fight), Officer?")
     command = input(">")
     if command in ["up", "down", "left", "right"]:
         current_room = current_room.move(command)
@@ -695,7 +695,7 @@ while dead == False:
         else:
             print("There is no one here to high five :(")
 
-    elif command == "get item":
+    elif command == "take":
         if item is not None:
             print("You picked up the " + item.get_name() + " and placed it in your bag.")
             bag.append(item.get_name())
