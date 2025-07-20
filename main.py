@@ -1,5 +1,6 @@
 from room import Room
-from character import Character, Enemy
+from character import Character, Enemy, Friend
+from item import Item
 
 platform = Room("Platform")
 platform.set_description("A long and wide train platform used by the mafia to run their illegal industry. On the left, covering 50% of the platform is the Loading zone with a storage. To the right is the Passenger Zone of the platform. In front of you are the platform screen doors, which form a barrier between the passengers and the tracks. Behind you is the lift you used to come here.")
@@ -46,16 +47,24 @@ level2.link_room(filing_room, "left")
 filing_room.link_room(level2, "right")
 
 big_Tony = Enemy("Big Tony", "The grand Mafia boss of Sydney, and NSW's most wanted criminal")
-big_Tony.set_conversation(f"Well, well, well ... if it isn't the police. I see you have finallyfound my secret underground railway system. Took you long enough.")
+big_Tony.set_conversation(f"Well, well, well ... if it isn't the undercover police. I see you have finally found my secret underground railway system. Took you long enough.")
 big_Tony.set_weakness("spaghetti")
 goods_storage.set_character(big_Tony)
+tim = Friend("Tim", "Your best friend who is co-working with you in the undercover cops case. He is always there to help you out, and is fearless as he skillfully fights alongside you.")
+tim.set_conversation("Goodday Offs, I am here to help you out with the case. There was no luck in finding Big Tony, but we found a letter that he wrote and left in the Jail cell.")
+UC_offices.set_character(tim)
+lopez = Friend("Lopes", "The Detective for this undercover cops case. She is in charge of the research and paperwork of the case and also collecting any evidence that could help with solving this case. She is also extremely skilled in fighting.")
+lopez.set_conversation("Hey Officer, have you got any evidence for me? Come back to me here once you have found the evidence, so I can add it to the case's research.")
+filing_room.set_character(lopez)
 
-
-
+# Create an item
+letter_one = Item("Letter 1")
+letter_one.set_description("A letter which was found in the Jail cell. It is written by Big Tony himself, and it has the word 'Clue#1'written in bold letters on the top of the letter. It is a clue to finding Big Tony. It has the following message: ")
+presentation_room.set_item(letter_one)
 # Start the game
 print("Welcome to the Undercover Cops Game!")
 
-current_room = UC_offices
+current_room = ground
 dead = False
 while dead == False:
     print("/n")
@@ -86,6 +95,14 @@ while dead == False:
         else:
             print("There is no one here to fight with")
 
+    elif command == "hi_five":
+        if inhabitant is not None:
+            if isinstance(inhabitant, Enemy):
+                print(" I wouldn't high five him if I were you...")
+            else:
+                inhabitant.hi_five()
+        else:
+            print("There is no one here to high five :(")
 
 current_room = loading
 dead = False
@@ -118,6 +135,14 @@ while dead == False:
         else:
             print("There is no one here to fight with")
 
+    elif command == "hi_five":
+        if inhabitant is not None:
+            if isinstance(inhabitant, Enemy):
+                print(" I wouldn't high five him if I were you...")
+            else:
+                inhabitant.hi_five()
+        else:
+            print("There is no one here to high five :(")
 
 current_room = goods_storage
 dead = False
@@ -149,6 +174,15 @@ while dead == False:
                 dead = True
         else:
             print("There is no one here to fight with")
+    
+    elif command == "hi_five":
+        if inhabitant is not None:
+            if isinstance(inhabitant, Enemy):
+                print(" I wouldn't high five him if I were you...")
+            else:
+                inhabitant.hi_five()
+        else:
+            print("There is no one here to high five :(")
 
 current_room = basement
 dead = False
@@ -180,8 +214,17 @@ while dead == False:
                 dead = True
         else:
             print("There is no one here to fight with")
+    
+    elif command == "hi_five":
+        if inhabitant is not None:
+            if isinstance(inhabitant, Enemy):
+                print(" I wouldn't high five him if I were you...")
+            else:
+                inhabitant.hi_five()
+        else:
+            print("There is no one here to high five :(")
 
-current_room = ground
+current_room = UC_offices
 dead = False
 while dead == False:
     print("/n")
@@ -211,6 +254,15 @@ while dead == False:
                 dead = True
         else:
             print("There is no one here to fight with")
+
+    elif command == "hi_five":
+        if inhabitant is not None:
+            if isinstance(inhabitant, Enemy):
+                print(" I wouldn't high five him if I were you...")
+            else:
+                inhabitant.hi_five()
+        else:
+            print("There is no one here to high five :(")
 
 current_room = jail_cell
 dead = False
@@ -243,6 +295,15 @@ while dead == False:
         else:
             print("There is no one here to fight with")
 
+    elif command == "hi_five":
+        if inhabitant is not None:
+            if isinstance(inhabitant, Enemy):
+                print(" I wouldn't high five him if I were you...")
+            else:
+                inhabitant.hi_five()
+        else:
+            print("There is no one here to high five :(")
+
 current_room = level1
 dead = False
 while dead == False:
@@ -273,6 +334,15 @@ while dead == False:
                 dead = True
         else:
             print("There is no one here to fight with")
+    
+    elif command == "hi_five":
+        if inhabitant is not None:
+            if isinstance(inhabitant, Enemy):
+                print(" I wouldn't high five him if I were you...")
+            else:
+                inhabitant.hi_five()
+        else:
+            print("There is no one here to high five :(")
 
 current_room = presentation_room
 dead = False
@@ -304,6 +374,14 @@ while dead == False:
                 dead = True
         else:
             print("There is no one here to fight with")
+    elif command == "hi_five":
+        if inhabitant is not None:
+            if isinstance(inhabitant, Enemy):
+                print(" I wouldn't high five him if I were you...")
+            else:
+                inhabitant.hi_five()
+        else:
+            print("There is no one here to high five :(")
 
 current_room = level2
 dead = False
@@ -335,6 +413,15 @@ while dead == False:
                 dead = True
         else:
             print("There is no one here to fight with")
+    
+    elif command == "hi_five":
+        if inhabitant is not None:
+            if isinstance(inhabitant, Enemy):
+                print(" I wouldn't high five him if I were you...")
+            else:
+                inhabitant.hi_five()
+        else:
+            print("There is no one here to high five :(")
 
 current_room = platform
 dead = False
@@ -367,6 +454,15 @@ while dead == False:
         else:
             print("There is no one here to fight with")
 
+    elif command == "hi_five":
+        if inhabitant is not None:
+            if isinstance(inhabitant, Enemy):
+                print(" I wouldn't high five him if I were you...")
+            else:
+                inhabitant.hi_five()
+        else:
+            print("There is no one here to high five :(")
+
 current_room = filing_room
 dead = False
 while dead == False:
@@ -398,6 +494,14 @@ while dead == False:
         else:
             print("There is no one here to fight with")
 
+    elif command == "hi_five":
+        if inhabitant is not None:
+            if isinstance(inhabitant, Enemy):
+                print(" I wouldn't high five him if I were you...")
+            else:
+                inhabitant.hi_five()
+        else:
+            print("There is no one here to high five :(")
 
 
 
