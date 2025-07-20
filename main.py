@@ -72,27 +72,27 @@ letter_three = Item("Letter 3")
 letter_three.set_description("A letter which was found in the basement. It is written by Big Tony himself, and it has the word 'Clue#3' written in bold letters on the top of the letter. This is the third and final clue to finding Big Tony. It has the following message: ")
 basement.set_item(letter_three)
 
-arrest_warrant = Item("Arrest Warrant")
+arrest_warrant = Item("The Arrest Warrant")
 arrest_warrant.set_description("An arrest warrant for Big Tony, issued by the police department. It is a legal document that allows you to arrest Big Tony. It has the following message: 'You are hereby ordered to arrest Big Tony, the grand Mafia boss of Sydney, and NSW's most wanted criminal.'")
 filing_room.set_item(arrest_warrant)
 
-gun = Item("Gun")
+gun = Item("Your Gun")
 gun.set_description("Your department issued gun, which you must have with you at all times. It is a standard issue gun for undercover cops.")
 UC_offices.set_item(gun)
 
-handcuffs = Item("Handcuffs")
+handcuffs = Item("Your Handcuffs")
 handcuffs.set_description("Your department issued handcuffs, which you must have with you at all times. They are used to restrain suspects and criminals.")
 UC_offices.set_item(handcuffs)
 
-taser = Item("Taser")
+taser = Item("Your Taser")
 taser.set_description("Your department issued taser, which you must have with you at all times. Used to control criminals without causing permanent harm.")
 level2.set_item(taser)
 
-spaghetti = Item("Spaghetti")
+spaghetti = Item("The Spaghetti")
 spaghetti.set_description("An unopened packet of spaghetti, sounds to stupid to be a weapon, but is more lethal than you think.")
 UC_offices.set_item(spaghetti)
 
-badge = Item("Badge")
+badge = Item("Your Badge")
 badge.set_description("Your department issued badge, which you must have with you at all times. It is your only proof showing that you're a cop since you are undercover.")
 ground.set_item(badge)
 bag = [gun, handcuffs, taser, spaghetti, badge]
@@ -128,7 +128,7 @@ while dead == False:
     elif command == "take":
         item = current_room.get_item()
         if item is not None:
-            print("You picked up the " + item.get_name() + " and placed it in your bag.")
+            print("You picked up " + item.get_name() + " and placed it in your bag.")
             bag.append(item.get_name())
             current_room.set_item(None)
         else:
@@ -140,7 +140,7 @@ while dead == False:
             fight_with = input()
             if fight_with in bag:
                 if inhabitant.fight(fight_with) == True:
-                    print("Congratualtions, you have successfully won the fight and captured Big Tony!")
+                    print("Congratulations, you have successfully won the fight and captured Big Tony!")
                     current_room.set_character(None)
                     if Enemy.enemies_to_defeat == 0:
                         print("You have defeated all the enemies and completed the game!")
@@ -185,7 +185,7 @@ while dead == False:
     elif command == "take":
         item = current_room.get_item()
         if item is not None:
-            print("You picked up the " + item.get_name() + " and placed it in your bag.")
+            print("You picked up " + item.get_name() + " and placed it in your bag.")
             bag.append(item.get_name())
             current_room.set_item(None)
         else:
@@ -197,7 +197,7 @@ while dead == False:
             fight_with = input()
             if fight_with in bag:
                 if inhabitant.fight(fight_with) == True:
-                    print("Congratualtions, you have successfully won the fight and captured Big Tony!")
+                    print("Congratulations, you have successfully won the fight and captured Big Tony!")
                     current_room.set_character(None)
                     if Enemy.enemies_to_defeat == 0:
                         print("You have defeated all the enemies and completed the game!")
@@ -241,7 +241,7 @@ while dead == False:
     elif command == "take":
         item = current_room.get_item()
         if item is not None:
-            print("You picked up the " + item.get_name() + " and placed it in your bag.")
+            print("You picked up " + item.get_name() + " and placed it in your bag.")
             bag.append(item.get_name())
             current_room.set_item(None)
         else:
@@ -253,7 +253,7 @@ while dead == False:
             fight_with = input()
             if fight_with in bag:
                 if inhabitant.fight(fight_with) == True:
-                    print("Congratualtions, you have successfully won the fight and captured Big Tony!")
+                    print("Congratulations, you have successfully won the fight and captured Big Tony!")
                     current_room.set_character(None)
                     if Enemy.enemies_to_defeat == 0:
                         print("You have defeated all the enemies and completed the game!")
@@ -299,7 +299,7 @@ while dead == False:
 
     elif command == "take":
         if item is not None:
-            print("You picked up the " + item.get_name() + " and placed it in your bag.")
+            print("You picked up " + item.get_name() + " and placed it in your bag.")
             bag.append(item.get_name())
             current_room.set_item(None)
         else:
@@ -311,7 +311,7 @@ while dead == False:
             fight_with = input()
             if fight_with in bag:
                 if inhabitant.fight(fight_with) == True:
-                    print("Congratualtions, you have successfully won the fight and captured Big Tony!")
+                    print("Congratulations, you have successfully won the fight and captured Big Tony!")
                     current_room.set_character(None)
                     if Enemy.enemies_to_defeat == 0:
                         print("You have defeated all the enemies and completed the game!")
@@ -357,7 +357,7 @@ while dead == False:
 
     elif command == "take":
         if item is not None:
-            print("You picked up the " + item.get_name() + " and placed it in your bag.")
+            print("You picked up " + item.get_name() + " and placed it in your bag.")
             bag.append(item.get_name())
             current_room.set_item(None)
         else:
@@ -369,7 +369,7 @@ while dead == False:
             fight_with = input()
             if fight_with in bag:
                 if inhabitant.fight(fight_with) == True:
-                    print("Congratualtions, you have successfully won the fight and captured Big Tony!")
+                    print("Congratulations, you have successfully won the fight and captured Big Tony!")
                     current_room.set_character(None)
                     if Enemy.enemies_to_defeat == 0:
                         print("You have defeated all the enemies and completed the game!")
@@ -415,7 +415,7 @@ while dead == False:
 
     elif command == "take":
         if item is not None:
-            print("You picked up the " + item.get_name() + " and placed it in your bag.")
+            print("You picked up " + item.get_name() + " and placed it in your bag.")
             bag.append(item.get_name())
             current_room.set_item(None)
         else:
@@ -427,7 +427,7 @@ while dead == False:
             fight_with = input()
             if fight_with in bag:
                 if inhabitant.fight(fight_with) == True:
-                    print("Congratualtions, you have successfully won the fight and captured Big Tony!")
+                    print("Congratulations, you have successfully won the fight and captured Big Tony!")
                     current_room.set_character(None)
                     if Enemy.enemies_to_defeat == 0:
                         print("You have defeated all the enemies and completed the game!")
@@ -470,7 +470,7 @@ while dead == False:
     elif command == "take":
         item = current_room.get_item()
         if item is not None:
-            print("You picked up the " + item.get_name() + " and placed it in your bag.")
+            print("You picked up " + item.get_name() + " and placed it in your bag.")
             bag.append(item.get_name())
             current_room.set_item(None)
         else:
@@ -482,7 +482,7 @@ while dead == False:
             fight_with = input()
             if fight_with in bag:
                 if inhabitant.fight(fight_with) == True:
-                    print("Congratualtions, you have successfully won the fight and captured Big Tony!")
+                    print("Congratulations, you have successfully won the fight and captured Big Tony!")
                     current_room.set_character(None)
                     if Enemy.enemies_to_defeat == 0:
                         print("You have defeated all the enemies and completed the game!")
@@ -527,7 +527,7 @@ while dead == False:
 
     elif command == "take":
         if item is not None:
-            print("You picked up the " + item.get_name() + " and placed it in your bag.")
+            print("You picked up " + item.get_name() + " and placed it in your bag.")
             bag.append(item.get_name())
             current_room.set_item(None)
         else:
@@ -539,7 +539,7 @@ while dead == False:
             fight_with = input()
             if fight_with in bag:
                 if inhabitant.fight(fight_with) == True:
-                    print("Congratualtions, you have successfully won the fight and captured Big Tony!")
+                    print("Congratulations, you have successfully won the fight and captured Big Tony!")
                     current_room.set_character(None)
                     if Enemy.enemies_to_defeat == 0:
                         print("You have defeated all the enemies and completed the game!")
@@ -583,7 +583,7 @@ while dead == False:
     elif command == "take":
         item = current_room.get_item()
         if item is not None:
-            print("You picked up the " + item.get_name() + " and placed it in your bag.")
+            print("You picked up " + item.get_name() + " and placed it in your bag.")
             bag.append(item.get_name())
             current_room.set_item(None)
         else:
@@ -595,7 +595,7 @@ while dead == False:
             fight_with = input()
             if fight_with in bag:
                 if inhabitant.fight(fight_with) == True:
-                    print("Congratualtions, you have successfully won the fight and captured Big Tony!")
+                    print("Congratulations, you have successfully won the fight and captured Big Tony!")
                     current_room.set_character(None)
                     if Enemy.enemies_to_defeat == 0:
                         print("You have defeated all the enemies and completed the game!")
@@ -639,7 +639,7 @@ while dead == False:
     elif command == "take":
         item = current_room.get_item()
         if item is not None:
-            print("You picked up the " + item.get_name() + " and placed it in your bag.")
+            print("You picked up " + item.get_name() + " and placed it in your bag.")
             bag.append(item.get_name())
             current_room.set_item(None)
         else:
@@ -651,7 +651,7 @@ while dead == False:
             fight_with = input()
             if fight_with in bag:
                 if inhabitant.fight(fight_with) == True:
-                    print("Congratualtions, you have successfully won the fight and captured Big Tony!")
+                    print("Congratulations, you have successfully won the fight and captured Big Tony!")
                     current_room.set_character(None)
                     if Enemy.enemies_to_defeat == 0:
                         print("You have defeated all the enemies and completed the game!")
@@ -697,7 +697,7 @@ while dead == False:
 
     elif command == "take":
         if item is not None:
-            print("You picked up the " + item.get_name() + " and placed it in your bag.")
+            print("You picked up " + item.get_name() + " and placed it in your bag.")
             bag.append(item.get_name())
             current_room.set_item(None)
         else:
@@ -709,7 +709,7 @@ while dead == False:
             fight_with = input()
             if fight_with in bag:
                 if inhabitant.fight(fight_with) == True:
-                    print("Congratualtions, you have successfully won the fight and captured Big Tony!")
+                    print("Congratulations, you have successfully won the fight and captured Big Tony!")
                     current_room.set_character(None)
                     if Enemy.enemies_to_defeat == 0:
                         print("You have defeated all the enemies and completed the game!")
