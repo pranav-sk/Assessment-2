@@ -5,7 +5,7 @@ class Character:
         self.conversation = None
     
     def describe(self):
-        print("Officer" +  self.char_name  + "is here")
+        print( self.char_name  + " is here")
         print(self.char_description)
     
     def set_conversation(self, conversation):
@@ -23,16 +23,22 @@ class Character:
     
 
 class Enemy(Character):
+    enemies_to_defeat = 3
     def __init__(self, char_name, char_description):
         super().__init__(char_name, char_description)
         self.weakness = None
-    
+        Enemy.enemies_to_defeat = Enemy.enemies_to_defeat + 1    
+
     def set_weakness(self, weakness):
         self.weakness = weakness
+
+    def get_weakness(self):
+        return self.weakness
     
     def fight(self, combat_item):
         if combat_item == self.weakness:
             print("You defeated " + self.char_name + " and successfully captured him with " + combat_item + "!")
+            Enemy.enemies_to_defeat = Enemy.enemies_to_defeat - 1
             return True
         else:
             print("You have been outsmarted by " + self.char_name + " and have been defeated!")
