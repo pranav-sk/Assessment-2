@@ -86,7 +86,7 @@ UC_offices.set_item(handcuffs)
 
 taser = Item("Taser")
 taser.set_description("Your department issued taser, which you must have with you at all times. Used to control criminals without causing permanent harm.")
-UC_offices.set_item(taser)
+level2.set_item(taser)
 
 spaghetti = Item("Spaghetti")
 spaghetti.set_description("An unopened packet of spaghetti, sounds to stupid to be a weapon, but is more lethal than you think.")
@@ -94,7 +94,7 @@ UC_offices.set_item(spaghetti)
 
 badge = Item("Badge")
 badge.set_description("Your department issued badge, which you must have with you at all times. It is your only proof showing that you're a cop since you are undercover.")
-UC_offices.set_item(badge)
+ground.set_item(badge)
 bag = [gun, handcuffs, taser, spaghetti, badge]
 # Start the game
 print("Welcome to the Undercover Cops Game!")
