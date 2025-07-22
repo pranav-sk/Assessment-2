@@ -52,10 +52,10 @@ big_Tony.set_weakness("spaghetti")
 goods_storage.set_character(big_Tony)
 
 tim = Friend("Tim", "Your best friend who is co-working with you in the undercover cops case. He is always there to help you out, and is fearless as he skillfully fights alongside you.")
-tim.set_conversation("Goodday Offs, I am here to help you out with the case. There was no luck in finding Big Tony, but we found a letter that he wrote and left in the Jail cell. You should go get it, it might be a clue to finding him. I will be here in the UC_offices if you need me.")
+tim.set_conversation("Goodday Offs, I am here to help you out with the case. There was no luck in finding Big Tony, but we found a letter that he wrote and left in the Jail cell. You should go get it, it might be a clue to finding him, then go find Detective Lopez. I will be here in the UC_offices if you need me.")
 UC_offices.set_character(tim)
 
-lopez = Friend("Lopes", "The Detective for this undercover cops case. She is in charge of the research and paperwork of the case and also collecting any evidence that could help with solving this case. She is also extremely skilled in fighting.")
+lopez = Friend("Lopez", "The Detective for this undercover cops case. She is in charge of the research and paperwork of the case and also collecting any evidence that could help with solving this case. She is also extremely skilled in fighting.")
 lopez.set_conversation("Hey Officer, have you got any evidence for me? Come back to me here once you have found the evidence, so I can add it to the case's research.")
 filing_room.set_character(lopez)
 
@@ -90,7 +90,14 @@ ground.set_item(badge_cuffs)
 bag = [gun_taser, spaghetti, badge_cuffs]
 
 # Start the game
-print("Welcome to the Undercover Cops Game!")
+print("Welcome to the Undercover Cops Game Simulator, Officer!")
+print("You are an undercover cop who is trying to catch Big Tony, the grand Mafia boss of Sydney, and NSW's most wanted criminal.")
+print("You will be exploring the police station and the underground railway system, collecting evidence and fighting enemies to catch Big Tony.")
+print("Big Tony has escaped from the jail cell of the station and has gone into hiding.")
+print("You will need to find clues and evidence to catch him, and you will also need to fight enemies along the way.")
+print("However, you must first find and collect your gun and taser and your badge and cuffs because it is department standards.")
+print("You will also need to find your friend Tim, who is co-working with you in the undercover cops case.")
+print("Good luck, Officer!")
 
 
 
