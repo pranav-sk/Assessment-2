@@ -122,6 +122,7 @@ while dead == False:
     elif command == "take":
         item = current_room.get_item()
         if item is not None:
+            item.describe()
             print("You picked up " + item.get_name() + " and placed it in your bag.")
             bag.append(item.get_name())
             current_room.set_item(None)
@@ -179,6 +180,7 @@ while dead == False:
     elif command == "take":
         item = current_room.get_item()
         if item is not None:
+            item.describe()
             print("You picked up " + item.get_name() + " and placed it in your bag.")
             bag.append(item.get_name())
             current_room.set_item(None)
@@ -235,6 +237,7 @@ while dead == False:
     elif command == "take":
         item = current_room.get_item()
         if item is not None:
+            item.describe()
             print("You picked up " + item.get_name() + " and placed it in your bag.")
             bag.append(item.get_name())
             current_room.set_item(None)
@@ -266,9 +269,6 @@ current_room = basement
 dead = False
 while dead == False:
     print("/n")
-    item = current_room.get_item()
-    if item is not None:
-        item.describe()
     current_room.get_details()
     inhabitant = current_room.get_character()
     if inhabitant is not None:
@@ -293,6 +293,7 @@ while dead == False:
 
     elif command == "take":
         if item is not None:
+            item.describe()
             print("You picked up " + item.get_name() + " and placed it in your bag.")
             bag.append(item.get_name())
             current_room.set_item(None)
@@ -324,9 +325,6 @@ current_room = UC_offices
 dead = False
 while dead == False:
     print("/n")
-    item = current_room.get_item()
-    if item is not None:
-        item.describe()
     current_room.get_details()
     inhabitant = current_room.get_character()
     if inhabitant is not None:
