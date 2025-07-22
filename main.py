@@ -112,7 +112,7 @@ while dead == False:
         item.describe()
     if inhabitant is not None:
         inhabitant.describe()
-    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take the badge and cuffs or fight), Officer?")
+    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take or fight), Officer?")
     command = input(">")
     if command in ["up", "down", "left", "right"]:
         current_room = current_room.move(command)
@@ -287,7 +287,7 @@ while dead == False:
         item.describe()
     if inhabitant is not None:
         inhabitant.describe()
-    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take Letter 3 or fight), Officer?")
+    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take or fight), Officer?")
     command = input(">")
     if command in ["up", "down", "left", "right"]:
         current_room = current_room.move(command)
@@ -345,7 +345,7 @@ while dead == False:
         item.describe()
     if inhabitant is not None:
         inhabitant.describe()
-    print("Where would you like to go (up, down, left or right) or do (talk to Tim, hi_five Tim, take the spaghetti or fight), Officer?")
+    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take or fight), Officer?")
     command = input(">")
     if command in ["up", "down", "left", "right"]:
         current_room = current_room.move(command)
@@ -403,7 +403,7 @@ while dead == False:
         item.describe()
     if inhabitant is not None:
         inhabitant.describe()
-    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take letter 1 or fight), Officer?")
+    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take or fight), Officer?")
     command = input(">")
     if command in ["up", "down", "left", "right"]:
         current_room = current_room.move(command)
@@ -518,7 +518,7 @@ while dead == False:
         item.describe()
     if inhabitant is not None:
         inhabitant.describe()
-    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take letter 2 or fight), Officer?")
+    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take or fight), Officer?")
     command = input(">")
     if command in ["up", "down", "left", "right"]:
         current_room = current_room.move(command)
@@ -575,7 +575,7 @@ while dead == False:
         item.describe()
     if inhabitant is not None:
         inhabitant.describe()
-    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take your gun and taser or fight), Officer?")
+    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take or fight), Officer?")
     command = input(">")
     if command in ["up", "down", "left", "right"]:
         current_room = current_room.move(command)
@@ -691,7 +691,7 @@ while dead == False:
         item.describe()
     if inhabitant is not None:
         inhabitant.describe()
-    print("Where would you like to go (up, down, left or right) or do (talk to Detective Lopez, hi_five Detective Lopez, take the Arrest warrant or fight), Officer?")
+    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take or fight), Officer?")
     command = input(">")
     if command in ["up", "down", "left", "right"]:
         current_room = current_room.move(command)
