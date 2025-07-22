@@ -91,6 +91,8 @@ bag = [gun_taser, spaghetti, badge_cuffs]
 # Start the game
 print("Welcome to the Undercover Cops Game!")
 
+
+
 current_room = ground
 dead = False
 while dead == False:
