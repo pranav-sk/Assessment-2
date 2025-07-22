@@ -88,6 +88,7 @@ badge_cuffs = Item("Your Badge and Handcuffs")
 badge_cuffs.set_description("Your department issued badge and handcuffs, which you must have with you at all times. It is your only proof showing that you're a cop since you are undercover and the handcuffs are used to detain criminals.")
 ground.set_item(badge_cuffs)
 bag = [gun_taser, spaghetti, badge_cuffs]
+
 # Start the game
 print("Welcome to the Undercover Cops Game!")
 
@@ -99,6 +100,9 @@ while dead == False:
     print("/n")
     current_room.get_details()
     inhabitant = current_room.get_character()
+    item = current_room.get_item()
+    if item is not None:
+        item.describe()
     if inhabitant is not None:
         inhabitant.describe()
     print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take or fight), Officer?")
@@ -120,12 +124,10 @@ while dead == False:
             print("There is no one here to high five :(")
 
     elif command == "take":
-        item = current_room.get_item()
         if item is not None:
-            item.describe()
-            print("You picked up " + item.get_name() + " and placed it in your bag.")
-            bag.append(item.get_name())
-            current_room.set_item(None)
+                print("You picked up " + item.get_name() + " and placed it in your bag.")
+                bag.append(item.get_name())
+                current_room.set_item(None)
         else:
             print("There is no item here to pick up.")
 
@@ -157,6 +159,9 @@ while dead == False:
     print("/n")
     current_room.get_details()
     inhabitant = current_room.get_character()
+    item = current_room.get_item()
+    if item is not None:
+        item.describe()
     if inhabitant is not None:
         inhabitant.describe()
     print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take or fight), Officer?")
@@ -178,9 +183,7 @@ while dead == False:
             print("There is no one here to high five :(")
 
     elif command == "take":
-        item = current_room.get_item()
         if item is not None:
-            item.describe()
             print("You picked up " + item.get_name() + " and placed it in your bag.")
             bag.append(item.get_name())
             current_room.set_item(None)
@@ -214,6 +217,9 @@ while dead == False:
     print("/n")
     current_room.get_details()
     inhabitant = current_room.get_character(big_Tony)
+    item = current_room.get_item()
+    if item is not None:
+        item.describe()
     if inhabitant is not None:
         inhabitant.describe()
     print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take or fight), Officer?")
@@ -235,9 +241,7 @@ while dead == False:
             print("There is no one here to high five :(")
 
     elif command == "take":
-        item = current_room.get_item()
         if item is not None:
-            item.describe()
             print("You picked up " + item.get_name() + " and placed it in your bag.")
             bag.append(item.get_name())
             current_room.set_item(None)
@@ -271,6 +275,9 @@ while dead == False:
     print("/n")
     current_room.get_details()
     inhabitant = current_room.get_character()
+    item = current_room.get_item()
+    if item is not None:
+        item.describe()
     if inhabitant is not None:
         inhabitant.describe()
     print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take or fight), Officer?")
@@ -293,7 +300,6 @@ while dead == False:
 
     elif command == "take":
         if item is not None:
-            item.describe()
             print("You picked up " + item.get_name() + " and placed it in your bag.")
             bag.append(item.get_name())
             current_room.set_item(None)
@@ -327,6 +333,9 @@ while dead == False:
     print("/n")
     current_room.get_details()
     inhabitant = current_room.get_character()
+    item = current_room.get_item()
+    if item is not None:
+        item.describe()
     if inhabitant is not None:
         inhabitant.describe()
     print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take or fight), Officer?")
@@ -380,11 +389,11 @@ current_room = jail_cell
 dead = False
 while dead == False:
     print("/n")
+    current_room.get_details()
+    inhabitant = current_room.get_character()
     item = current_room.get_item()
     if item is not None:
         item.describe()
-    current_room.get_details()
-    inhabitant = current_room.get_character()
     if inhabitant is not None:
         inhabitant.describe()
     print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take or fight), Officer?")
@@ -440,6 +449,9 @@ while dead == False:
     print("/n")
     current_room.get_details()
     inhabitant = current_room.get_character()
+    item = current_room.get_item()
+    if item is not None:
+        item.describe()
     if inhabitant is not None:
         inhabitant.describe()
     print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take or fight), Officer?")
@@ -460,7 +472,6 @@ while dead == False:
             print("There is no one here to high five :(")
     
     elif command == "take":
-        item = current_room.get_item()
         if item is not None:
             print("You picked up " + item.get_name() + " and placed it in your bag.")
             bag.append(item.get_name())
@@ -493,11 +504,11 @@ current_room = presentation_room
 dead = False
 while dead == False:
     print("/n")
+    current_room.get_details()
+    inhabitant = current_room.get_character()
     item = current_room.get_item()
     if item is not None:
         item.describe()
-    current_room.get_details()
-    inhabitant = current_room.get_character()
     if inhabitant is not None:
         inhabitant.describe()
     print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take or fight), Officer?")
@@ -552,6 +563,9 @@ while dead == False:
     print("/n")
     current_room.get_details()
     inhabitant = current_room.get_character()
+    item = current_room.get_item()
+    if item is not None:
+        item.describe()
     if inhabitant is not None:
         inhabitant.describe()
     print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take or fight), Officer?")
@@ -573,7 +587,6 @@ while dead == False:
             print("There is no one here to high five :(")
 
     elif command == "take":
-        item = current_room.get_item()
         if item is not None:
             print("You picked up " + item.get_name() + " and placed it in your bag.")
             bag.append(item.get_name())
@@ -608,6 +621,9 @@ while dead == False:
     print("/n")
     current_room.get_details()
     inhabitant = current_room.get_character()
+    item = current_room.get_item()
+    if item is not None:
+        item.describe()
     if inhabitant is not None:
         inhabitant.describe()
     print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take or fight), Officer?")
@@ -629,7 +645,6 @@ while dead == False:
             print("There is no one here to high five :(")
 
     elif command == "take":
-        item = current_room.get_item()
         if item is not None:
             print("You picked up " + item.get_name() + " and placed it in your bag.")
             bag.append(item.get_name())
@@ -662,11 +677,11 @@ current_room = filing_room
 dead = False
 while dead == False:
     print("/n")
+    current_room.get_details()
+    inhabitant = current_room.get_character()
     item = current_room.get_item()
     if item is not None:
         item.describe()
-    current_room.get_details()
-    inhabitant = current_room.get_character()
     if inhabitant is not None:
         inhabitant.describe()
     print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take or fight), Officer?")
