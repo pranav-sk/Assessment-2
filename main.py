@@ -72,7 +72,7 @@ arrest_warrant = Item("The Arrest Warrant")
 arrest_warrant.set_description("An arrest warrant for Big Tony, issued by the police department. It is a legal document that allows you to arrest Big Tony. It has the following message: 'You are hereby ordered to arrest Big Tony, the grand Mafia boss of Sydney, and NSW's most wanted criminal.'")
 filing_room.set_item(arrest_warrant)
 
-gun_taser = Item("Your Gun and Taser")
+gun_taser = Item("Gun and Taser")
 gun_taser.set_description("Your department issued gun and taser, which you must have with you at all times. It is a standard issue gun and taser for undercover cops. Taser is used to control criminals without causing permanent harm, and the gun is used to protect yourself in case of an emergency.")
 level2.set_item(gun_taser)
 
@@ -80,7 +80,7 @@ spaghetti = Item("The Spaghetti")
 spaghetti.set_description("An unopened packet of spaghetti, sounds to stupid to be a weapon, but is more lethal than you think.")
 UC_offices.set_item(spaghetti)
 
-badge_cuffs = Item("Your Badge and Handcuffs")
+badge_cuffs = Item("Badge and Handcuffs")
 badge_cuffs.set_description("Your department issued badge and handcuffs, which you must have with you at all times. It is your only proof showing that you're a cop since you are undercover and the handcuffs are used to detain criminals.")
 ground.set_item(badge_cuffs)
 bag = [gun_taser, spaghetti, badge_cuffs]
