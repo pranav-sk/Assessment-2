@@ -52,12 +52,8 @@ big_Tony.set_weakness("spaghetti")
 goods_storage.set_character(big_Tony)
 
 tim = Friend("Tim", "Your best friend who is co-working with you in the undercover cops case. He is always there to help you out, and is fearless as he skillfully fights alongside you.")
-tim.set_conversation("Goodday Offs, I am here to help you out with the case. There was no luck in finding Big Tony, but we found a letter that he wrote and left in the Jail cell. You should go get it, it might be a clue to finding him, then go find Detective Lopez. I will be here in the UC_offices if you need me.")
+tim.set_conversation("Goodday Offs, I am here to help you out with the case. There was no luck in finding Big Tony, but we found a letter that he wrote and left in the Jail cell. You should go get it, it might be a clue to finding him. I will be here in the UC_offices if you need me.")
 UC_offices.set_character(tim)
-
-lopez = Friend("Lopez", "The Detective for this undercover cops case. She is in charge of the research and paperwork of the case and also collecting any evidence that could help with solving this case. She is also extremely skilled in fighting.")
-lopez.set_conversation("Hey Officer, have you got any evidence for me? Come back to me here once you have found the evidence, so I can add it to the case's research.")
-filing_room.set_character(lopez)
 
 # Create an item
 letter_one = Item("Letter 1")
