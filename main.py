@@ -61,15 +61,15 @@ filing_room.set_character(lopez)
 
 # Create an item
 letter_one = Item("Letter 1")
-letter_one.set_description("A letter which was found in the Jail cell. It is written by Big Tony himself, and it has the word 'Clue#1'written in bold letters on the top of the letter. It is a clue to finding Big Tony. It has the following message: ")
+letter_one.set_description("A letter which was found in the Jail cell. It is written by Big Tony himself, and it has the word 'Clue#1'written in bold letters on the top of the letter. It is a clue to finding Big Tony.")
 jail_cell.set_item(letter_one)
 
 letter_two = Item("Letter 2")
-letter_two.set_description("A letter which was found on your desk in the UC_offices. It is written by Big Tony himself, and it has the word 'Clue#2' written in bold letters on the top of the letter. This is the second clue to finding Big Tony. It has the following message: ")
+letter_two.set_description("A letter which was found on your desk in the UC_offices. It is written by Big Tony himself, and it has the word 'Clue#2' written in bold letters on the top of the letter. This is the second clue to finding Big Tony.")
 presentation_room.set_item(letter_two)
 
 letter_three = Item("Letter 3")
-letter_three.set_description("A letter which was found in the basement. It is written by Big Tony himself, and it has the word 'Clue#3' written in bold letters on the top of the letter. This is the third and final clue to finding Big Tony. It has the following message: ")
+letter_three.set_description("A letter which was found in the basement. It is written by Big Tony himself, and it has the word 'Clue#3' written in bold letters on the top of the letter. This is the third and final clue to finding Big Tony. ")
 basement.set_item(letter_three)
 
 arrest_warrant = Item("The Arrest Warrant")
@@ -312,6 +312,16 @@ while dead == False:
             current_room.set_item(None)
         else:
             print("There is no item here to pick up")
+
+    elif command == "read":
+        if item is not None:
+            print("You read the " + item.get_name() + ":")
+            print(" ")
+            if item.get_name() == "Letter 3":
+                print("You have found the third clue to finding Big Tony!")
+                print("Now you need to find your gun and taser, the arrest warrant, spaghetti and your badge and cuffs, and then you can go find Big Tony.")
+        else:
+            print("There is no item here to read")
            
     elif command == "fight":
         if inhabitant is not None and isinstance(inhabitant, Enemy):
@@ -428,6 +438,16 @@ while dead == False:
             current_room.set_item(None)
         else:
             print("There is no item here to pick up")
+    
+    elif command == "read":
+        if item is not None:
+            print("You read the " + item.get_name() + ":")
+            print("Greetings, officer. I am Big Tony, the grand Mafia boss of Sydney, and NSW's most wanted criminal. I have escaped from the clutches of your justice system and am now hiding away in my secret factory. You will never catch me! But if you want to try, find the three clues I left you. Here is your first: 'I own a transporting business and use a specific mode of transport. For the second clue in the station, continue your search up and up'. Good luck finding me.")
+            if item.get_name() == "Letter 1":
+                print("You have found the first clue to finding Big Tony!")
+                print("Now you need to find the second clue that will help you find Big Tony.")
+        else:
+            print("There is no item here to read")
 
     elif command == "fight":
         if inhabitant is not None and isinstance(inhabitant, Enemy):
@@ -542,6 +562,16 @@ while dead == False:
             current_room.set_item(None)
         else:
             print("There is no item here to pick up")
+
+    elif command == "read":
+        if item is not None:
+            print("You read the " + item.get_name() + ":")
+            print("")
+            if item.get_name() == "Letter 2":
+                print("You have found the second clue to finding Big Tony!")
+                print("Now you need to find the spaghetti and then you can go find your final clue.")
+        else:
+            print("There is no item here to read")
 
     elif command == "fight":
         if inhabitant is not None and isinstance(inhabitant, Enemy):
