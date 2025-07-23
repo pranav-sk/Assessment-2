@@ -112,7 +112,7 @@ while dead == False:
         item.describe()
     if inhabitant is not None:
         inhabitant.describe()
-    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take or fight), Officer?")
+    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take, or fight), Officer?")
     command = input(">")
     if command in ["up", "down", "left", "right"]:
         current_room = current_room.move(command)
@@ -287,7 +287,7 @@ while dead == False:
         item.describe()
     if inhabitant is not None:
         inhabitant.describe()
-    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take or fight), Officer?")
+    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take, read or fight), Officer?")
     command = input(">")
     if command in ["up", "down", "left", "right"]:
         current_room = current_room.move(command)
@@ -316,7 +316,7 @@ while dead == False:
     elif command == "read":
         if item is not None:
             print("You read the " + item.get_name() + ":")
-            print(" ")
+            print(" AHHHHHHHHHHHHHHHHH! You have found my third and final clue to finding me. Here it is: ' My secret office is not where anyone to expect it to be. Sometimes you can't think where it is. Maybe you should think what is below you.' Remember to be armed before finding me, cause I am not coming down without a fight.")
             if item.get_name() == "Letter 3":
                 print("You have found the third clue to finding Big Tony!")
                 print("Now you need to find your gun and taser, the arrest warrant, spaghetti and your badge and cuffs, and then you can go find Big Tony.")
@@ -413,7 +413,7 @@ while dead == False:
         item.describe()
     if inhabitant is not None:
         inhabitant.describe()
-    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take or fight), Officer?")
+    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take, read or fight), Officer?")
     command = input(">")
     if command in ["up", "down", "left", "right"]:
         current_room = current_room.move(command)
@@ -538,7 +538,7 @@ while dead == False:
         item.describe()
     if inhabitant is not None:
         inhabitant.describe()
-    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take or fight), Officer?")
+    print("Where would you like to go (up, down, left or right) or do (talk, hi_five, take, read or fight), Officer?")
     command = input(">")
     if command in ["up", "down", "left", "right"]:
         current_room = current_room.move(command)
@@ -566,7 +566,7 @@ while dead == False:
     elif command == "read":
         if item is not None:
             print("You read the " + item.get_name() + ":")
-            print("")
+            print("Greetings, again. Well done! I see that you have found my second clue to finding me. Here it is: 'My Nonna told me that if I was doing something illegal, do it the right way. My third clue is hidden in a room where down where you used to enter and exit when you were on patrol.' Good luck finding me.")
             if item.get_name() == "Letter 2":
                 print("You have found the second clue to finding Big Tony!")
                 print("Now you need to find the spaghetti and then you can go find your final clue.")
