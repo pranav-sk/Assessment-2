@@ -219,7 +219,7 @@ dead = False
 while dead == False:
     print("/n")
     current_room.get_details()
-    inhabitant = current_room.get_character(big_Tony)
+    inhabitant = current_room.get_character()
     item = current_room.get_item()
     if item is not None:
         item.describe()
